@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">PT 16</string>
+    <string name="company_log">company logo</string>
+    <string name="button">Button</string>
+    <string name="choose_your_subjects">Choose your subjects:</string>
+</resources>
