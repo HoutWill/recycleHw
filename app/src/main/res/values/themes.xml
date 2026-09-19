@@ -2,8 +2,19 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.PT16" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+         <item name="colorPrimary">@color/primary</item>
     </style>
 
     <style name="Theme.PT16" parent="Base.Theme.PT16" />
+    <style name="btn_round">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="btn_round_bg_grey">
+        <item name="shapeAppearanceOverlay">@style/btn_round</item>
+        <item name="android:background">#C0C0C0</item>
+        <item name="strokeWidth">10dp</item>
+        <item name="strokeColor">@color/grey</item>
+    </style>
 </resources>
