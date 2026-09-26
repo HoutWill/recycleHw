@@ -1,6 +1,8 @@
 package com.example.pt16;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -51,7 +53,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 binding.tvHello.setText("Hello Android");
-                Toast.makeText(MainActivity.this, "Button Clicked", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this, "Button Clicked", Toast.LENGTH_SHORT).show();
+
+                // Explicit
+                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                intent.putExtra("myValue", "Hello");
+                startActivity(intent);
+
+                // Implicit
+//                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                intent.setData(Uri.parse("https://www.google.com"));
+//                startActivity(intent);
             }
         });
 
@@ -155,23 +167,5 @@ public class MainActivity extends AppCompatActivity {
 
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
-    }
-}
-
-class Test implements TextWatcher {
-
-    @Override
-    public void afterTextChanged(Editable s) {
-
-    }
-
-    @Override
-    public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-    }
-
-    @Override
-    public void onTextChanged(CharSequence s, int start, int before, int count) {
-
     }
 }
