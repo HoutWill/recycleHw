@@ -31,8 +31,11 @@ public class FirstFragment extends Fragment {
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         binding.btn.setOnClickListener(v -> {
             binding.tvHello.setText("Hello Fragment!!!");
+
+            var action = FirstFragmentDirections.actionFirstToSecond(10);
+
             Navigation.findNavController(binding.getRoot())
-                    .navigate(R.id.action_first_to_second);
+                    .navigate(action);
         });
         return binding.getRoot();
     }
