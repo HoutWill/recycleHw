@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_dark"
+    android:padding="12dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardPoster"
+        android:layout_width="120dp"
+        android:layout_height="160dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/imgMovie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/movie_1"
+            android:contentDescription="@string/app_name" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="4.5"
+        android:textColor="@color/text_primary"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_rating_badge"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="4dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="4dp"
+        app:drawableStartCompat="@drawable/ic_star"
+        android:drawablePadding="4dp"
+        app:layout_constraintStart_toStartOf="@id/cardPoster"
+        app:layout_constraintTop_toTopOf="@id/cardPoster" />
+
+    <TextView
+        android:id="@+id/tvBadge"
+        style="@style/AccessBadge"
+        tools:text="Free"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/cardPoster"
+        app:layout_constraintTop_toTopOf="@id/cardPoster" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        tools:text="Riverdale"
+        android:textColor="@color/text_primary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/cardPoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBadge" />
+
+    <ImageView
+        android:id="@+id/imgCalendar"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_calendar"
+        android:contentDescription="@string/app_name"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/cardPoster"
+        app:layout_constraintTop_toTopOf="@id/tvYear"
+        app:layout_constraintBottom_toBottomOf="@id/tvYear" />
+
+    <TextView
+        android:id="@+id/tvYear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2021"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/imgCalendar"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/imgClock"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_clock"
+        android:contentDescription="@string/app_name"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/cardPoster"
+        app:layout_constraintTop_toTopOf="@id/tvDuration"
+        app:layout_constraintBottom_toBottomOf="@id/tvDuration" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="148 Minutes"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/imgClock"
+        app:layout_constraintTop_toBottomOf="@id/tvYear" />
+
+    <TextView
+        android:id="@+id/tvAgeRating"
+        style="@style/AgeRatingBadge"
+        tools:text="PG-13"
+        android:layout_marginStart="12dp"
+        app:layout_constraintStart_toEndOf="@id/tvDuration"
+        app:layout_constraintTop_toTopOf="@id/tvDuration"
+        app:layout_constraintBottom_toBottomOf="@id/tvDuration" />
+
+    <ImageView
+        android:id="@+id/imgMovieIcon"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_movie"
+        android:contentDescription="@string/app_name"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/cardPoster"
+        app:layout_constraintTop_toTopOf="@id/tvGenreType"
+        app:layout_constraintBottom_toBottomOf="@id/tvGenreType" />
+
+    <TextView
+        android:id="@+id/tvGenreType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Action | Movie"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@id/imgMovieIcon"
+        app:layout_constraintTop_toBottomOf="@id/tvDuration" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

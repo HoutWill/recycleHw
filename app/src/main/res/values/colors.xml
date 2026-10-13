@@ -5,4 +5,13 @@
     <color name="red">#FF0000</color>
     <color name="grey">#C0C0C0</color>
     <color name="primary">#000080</color>
+
+    <color name="bg_dark">#161622</color>
+    <color name="card_dark">#1E1E2C</color>
+    <color name="badge_free_bg">#26A69A</color>
+    <color name="badge_premium_bg">#D97706</color>
+    <color name="badge_age_rating">#38BDF8</color>
+    <color name="text_primary">#F3F4F6</color>
+    <color name="text_secondary">#9CA3AF</color>
+    <color name="star_gold">#F59E0B</color>
 </resources>
